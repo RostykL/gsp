@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: black;
 }
+/* HEADER */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  height: 70px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 30px;
+  border-bottom: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+/* App.js */
+.App {
+  background-color: teal;
+  min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.appBody {
+  padding: 20px 30px;
+  display: flex;
+}
+
+/* Searchbar */
+.searchbar {
+  min-width: 250px;
+  border-right: 1px solid rgba(0,0,0,0.5);
+  padding-right: 10px;
+}
+
+.searchInput input {
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 9999px;
+  margin-bottom: 30px;
+
+}
+
+.searchInput input:focus {
+  outline: none;
+}
+
+/* Repo List*/
+.reposList {
+  flex: 1;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.repo {
+  background-color: white;
+  margin: 10px;
+  padding: 20px 30px;
+  border-radius: 15px;
+  flex-grow: 2;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+
+/* History */
+.historyElement:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
